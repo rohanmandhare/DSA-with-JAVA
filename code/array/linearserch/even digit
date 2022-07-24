@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int[] nums = {23,56,12452,3,644,98,749,858,63};
+    int res = findnumber(nums);
+    System.out.println(res);
+  }
+  static int findnumber (int[] nums)
+  {
+    int count=0;
+    for(int num : nums){
+      if(even(num)){
+        count++;
+      }
+    }
+    return count;
+  }
+  static boolean even(int num)
+  {
+      int noofdigit = digit(num);
+      return noofdigit % 2 == 0;
+  }
+  static int digit(int num)
+  {
+    if(num<0)
+    {
+      num = num * -1;
+    }
+    if (num==0)
+    {
+      return 1;
+    }
+    int count = 0;
+    while (num>0)
+    {
+      count++;
+      num = num / 10;
+    }
+    return count;
+  }
+};
