@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class Linear {
+public static void main(String[] args){
+  Scanner input = new Scanner(System.in);
+  int[] num = {15,25,65,987,456,98,35,48,68,78};
+  int taregt = 456;
+  System.out.println(linearsearch(num , target ,1 ,5));
+  
+}
+static int linearsearch(int[] arr , int target , int start , int end )  //here we pass 4 function at a time
+{
+  if (arr.length == 0){
+  return -1;
+  }
+  for (int index = start ; index <end ; index++){
+    if(target == arr[index]){
+    return index;
+    }
+    
+  }
+  return -1;
+}
+
+};
+
+//output == 4 
+//456 this number is present in the given array at 4th index in the array
