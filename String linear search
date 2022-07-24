@@ -1,0 +1,27 @@
+import java.util.Scanner;   //it is imp for to take Scanner class values
+import java.util.*;
+import java.util.Arrays;  // here we declare the string for acceess the Arrays.toString function
+
+public class Linearsearch{
+public static void main(String[] args){
+  Scanner input = new Scanner(System.in);   //it's useful to take input from keyboard
+  String name = "Engineering is best";  
+  char ele = 's';
+  System.out.println(Arrays.toString(name.toCharArray()));  //here what we pass in the function that will again return as a string list
+  System.out.println(search(name, ele);  // here we pass the values as well as calls the function simultaneously
+  
+}
+static boolean search(String str , char target) //here we create a function that accept string and character both
+{
+  if (str.length() == 0){
+  return false;
+  }
+  for(char ch : str.toCharArray()){
+    if(ch == target){
+      return true;
+    }
+  }
+  return false;
+}
+
+};
