@@ -1,0 +1,32 @@
+import java.util.Arrays;
+import java.util.*;
+
+public class Array2d{
+  public static void main(String[] args)
+  {
+      int[][] num = {
+                    {24,3,5,6},
+                    {45,6,35,8},
+                    {4,9},
+                    {45,68,78},
+                     {55,59,57,58,93}
+      };
+      int target = 58;
+      int[] res = arrays2d(num , target); //here we pass the values to the function and store in the 1 dimension array
+      System.out.println(Arrays.toString(res)); // here tostring function convert array into string 
+  }
+  static int[] arrays2d(int[][] arr , int target)
+{
+  for (int row = 0 ; row<arr.length ; row++)
+  {
+      for (int col = 0 ; col<arr[row].length ; col++)  //here we take the col<arr[row].length because here row elements size not fixed
+      {
+        if(arr[row][col]==target)
+        {
+          return new int[]{row,col};  //here we use new int function for initilisation of the array and store it into a 1 diamension array
+        }
+      }
+  }
+  return new int[]{-1,-1};  //if elements not found in the given array that time it gives simply -1 values
+}
+};
