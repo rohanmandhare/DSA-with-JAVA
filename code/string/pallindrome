@@ -1,0 +1,22 @@
+import java.util.*;
+public class Pallindrome
+{
+  public static void main(String[] args)
+  {
+    Scanner input = new Scanner(System.in);
+    String a , b="";
+    System.out.println("Enter any string : ");
+    a = input.next();
+    int n = a.length();
+    for (int i=n-1 ; i>=0 ; i--){
+      b = b + a.charAt(i);
+    }
+    if (a.equalsIgnoreCase(b)){
+      System.out.println("Given String PALLINDROME");
+    }
+    else
+    {
+      System.out.println("Given String NOT PALLINDROME");
+    }
+    }
+};
